@@ -1,0 +1,13 @@
+flowchart TD
+  A["User SQL Query / Request Payload"] --> B["Layer 1: Query Normalization Engine"]
+  B --> C["Layer 2: Semantic NLP Feature Extraction"]
+  B --> D["Layer 3: Aura Template Database"]
+  D --> E["Layer 4: Structural Delta Analysis"]
+  C --> F["Feature Fusion"]
+  E --> F
+  F --> G["Layer 5: Ensemble Learning Layer"]
+  G --> H["Layer 6: Explainability Layer"]
+  H --> I["Layer 7: Decision Layer"]
+  I --> J["ALLOW / SUSPICIOUS / BLOCK"]
+  I --> K["Confidence, Threat Level, Report"]
+

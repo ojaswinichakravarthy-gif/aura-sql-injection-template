@@ -1,0 +1,21 @@
+sequenceDiagram
+  participant U as User
+  participant API as FastAPI / Streamlit
+  participant N as Normalizer
+  participant F as Feature Extractor
+  participant T as Aura Templates
+  participant D as Structural Delta
+  participant M as Ensemble Model
+  participant X as Explainer
+  U->>API: Submit query
+  API->>N: Canonicalize query
+  N-->>API: Normalized query and tokens
+  API->>F: Extract semantic features
+  API->>T: Match legitimate templates
+  T-->>D: Best template and token sequence
+  API->>D: Compute structural delta
+  API->>M: Predict using fused features
+  M-->>X: Score and component contributions
+  X-->>API: Reasons and influential features
+  API-->>U: Decision, confidence, threat level
+
